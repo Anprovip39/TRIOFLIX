@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <span class="bg-animate"></span>
+      <span class="bg-animate2"></span>
+      <div class="form-box login">
+        <h2 class="animation" style="--i: 0; --j: 21">Đăng nhập</h2>
+        <form action="#">
+          <div class="input-box animation" style="--i: 1; --j: 22">
+            <input type="text" required />
+            <label for="">Email hoặc số điện thoại</label>
+            <i class="bx bxs-user"></i>
+          </div>
+          <div class="input-box animation" style="--i: 2; --j: 23">
+            <input type="text" required />
+            <label for="">Mật khẩu</label>
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <button type="submit" class="btn animation" style="--i: 3; --j: 24">
+            Đăng nhập
+          </button>
+          <div class="logreg-link animation" style="--i: 4; --j: 25">
+            <p>
+              Bạn chưa có tài khoản?
+              <a href="#" class="register-link">Đăng ký</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div class="info-text login" style="--i: 0; --j: 20">
+        <h2 class="animation" style="--i: 1; --j: 21">
+          XIN CHÀO BẠN ĐÃ QUAY LẠI
+        </h2>
+        <p class="animation" style="--i: 3; --j: 23">
+          Xem phim trực tuyến, tận hưởng trọn vẹn những bộ phim yêu thích.
+        </p>
+      </div>
+
+      <div class="form-box register">
+        <h2 class="animation" style="--i: 17; --j: 0">Đăng ký</h2>
+        <form action="#">
+          <div class="input-box animation" style="--i: 18; --j: 1">
+            <input type="text" required />
+            <label for="">Tên người dùng</label>
+            <i class="bx bxs-user"></i>
+          </div>
+          <div class="input-box animation" style="--i: 19; --j: 2">
+            <input type="text" required />
+            <label for="">Email hoặc số điện thoại</label>
+            <i class="bx bxs-envelope"></i>
+          </div>
+          <div class="input-box animation" style="--i: 20; --j: 3">
+            <input type="text" required />
+            <label for="">Mật khẩu</label>
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <button type="submit" class="btn animation" style="--i: 21; --j: 4">
+            Đăng ký
+          </button>
+          <div class="logreg-link animation" style="--i: 22; --j: 5">
+            <p>
+              Bạn đã có tài khoản? <a href="#" class="login-link">Đăng nhập</a>
+            </p>
+          </div>
+        </form>
+      </div>
+      <div class="info-text register">
+        <h2 class="animation" style="--i: 17; --j: 0">
+          CHÀO MỪNG ĐẾN VỚI TRIOFLIX
+        </h2>
+        <p class="animation" style="--i: 19; --j: 2">
+          Xem phim trực tuyến, tận hưởng trọn vẹn những bộ phim yêu thích.
+        </p>
+      </div>
+    </div>
+    <script src="js/login.js"></script>
+  </body>
+</html>

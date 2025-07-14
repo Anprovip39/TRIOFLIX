@@ -1,0 +1,126 @@
+:root {
+  --fontContent: "Roboto", sans-serif;
+  --fontTitle-nameFilm: "Raleway", sans-serif;
+  --colorBackgroundMain: #000;
+  --colorGradient: linear-gradient(to right, #f90909, #f5f322);
+  --colorBackgroundSecondary: #1a1a1a;
+  --colorRed: #f90909;
+  --colorYellow: #f5f322;
+  --colorBlue: #00daff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+html {
+  background-color: var(--colorBackgroundSecondary);
+}
+.container {
+  display: flex;
+  min-height: 100vh;
+  color: #fff;
+  background-color: var(--colorBackgroundMain);
+}
+
+.admin-container {
+  display: flex;
+  width: 100%;
+  background-color: var(--colorBackgroundMain);
+  flex-direction: column;
+  text-align: center;
+  header {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: var(--colorBackgroundMain);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  height: auto; /* Full height */
+}
+
+.logo {
+  text-align: center;
+  width: 100%; /* Full width */
+  background-color: var(
+    --colorBackgroundSecondary
+  ); /* Background color for logo */
+}
+
+.logo img {
+  width: 70%;
+  height: auto;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Full width */
+  padding: 10px;
+  background-color: var(
+    --colorBackgroundSecondary
+  ); /* Background color for profile section */
+}
+
+.profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.sidebar_menu {
+  width: 100%;
+}
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  padding: 15px 0;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  /* transition: background-color 0.3s ease, color 0.3s ease; */
+}
+
+nav ul li:hover {
+  background-color: #fff;
+  color: #000; /* Text color changes to black when hovered or active */
+}
+
+.on_click {
+  background-color: #fff;
+  color: #000;
+}
+
+.xoagachchan {
+  text-decoration: none;
+}
+.content {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: var(--colorBackgroundSecondary);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--colorBackgroundSecondary);
+  border-bottom: 2px solid #ccc;
+}
+
+header h1 {
+  font-size: 24px;
+}

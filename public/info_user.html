@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông tin người dùng</title>
+    <link rel="stylesheet" href="info_user.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="container header">
+        <a href="#" class="logo"><img src="img/Trioflix-logo.png" alt="" /></a>
+        <ul class="navbar">
+          <li class="mainmenu"><a href="#" class="link">Trang chủ</a></li>
+          <li class="mainmenu">
+            <a href="#" class="link"
+              >Thể loại<i class="bx bx-chevron-down"></i>
+            </a>
+            <ul class="submenu">
+              <li><a href="">Hành động</a></li>
+              <li><a href="">Hài hước</a></li>
+              <li><a href="">Tâm lí</a></li>
+              <li><a href="">Kinh dị</a></li>
+              <li><a href="">Hoạt hình</a></li>
+              <li><a href="">Khoa học - VIễn tưởng</a></li>
+              <li><a href="">Tình cảm</a></li>
+              <li><a href="">Phiêu lưu</a></li>
+              <li><a href="">Cổ trang</a></li>
+              <li><a href="">Võ thuật</a></li>
+            </ul>
+          </li>
+          <li class="mainmenu">
+            <a href="#" class="link">Khác<i class="bx bx-chevron-down"></i></a>
+            <ul class="submenu other">
+              <li><a href="">Phim lẻ</a></li>
+              <li><a href="">Lịch sử xem</a></li>
+              <li><a href="">Phim bộ</a></li>
+            </ul>
+          </li>
+          <li class="mainmenu"><a href="#" class="link">Thư viện</a></li>
+          <li class="mainmenu">
+            <a href="#" class="link"><i class="bx bxs-bell"></i></a>
+          </li>
+        </ul>
+        <div class="nav-others">
+          <div class="searchbar">
+            <i class="bx bx-search"></i> <span></span>
+            <input type="text" placeholder="Tìm kiếm" id="search" />
+          </div>
+          <button class="btn buyBtn">Mua gói</button>
+          <a href="#" class="account">
+            <i class="bx bx-user"></i>
+            <div><a href="dangnhap.html">đăng nhập</a></div>
+          </a>
+        </div>
+      </div>
+    </header>
+    <div id="contents">
+      <div class="mainContents container">
+        <form
+          action=""
+          method="post"
+          enctype="multipart/form-data"
+          class="user_image"
+        >
+          <input type="hidden" name="user_id" value="1" />
+          <input
+            type="file"
+            name="user_image"
+            id="fileUpload"
+            accept="image/*"
+            style="display: none"
+          />
+
+          <div class="imageuser">
+            <img src="" alt="" />
+            <label for="fileUpload"><i class="bx bx-camera"></i></label>
+          </div>
+          <h4 class="name_user">123></h4>
+
+          <input
+            class="userbtn"
+            value="Cập nhật ảnh"
+            type="submit"
+            name="changeImg"
+          />
+        </form>
+        <div class="user_edit">
+          <form class="edit_info" method="post" enctype="multipart/form-data">
+            <h2>Thông tin người dùng</h2>
+            <div class="infouser">
+              <input type="hidden" name="user_id" value="1" />
+              <div class="title">Tên người dùng</div>
+              <input
+                type="text"
+                name="username"
+                id=""
+                required
+                class="input"
+                placeholder="1223 (Có thể sửa)"
+              />
+            </div>
+            <hr />
+            <div class="infouser">
+              <div class="title">Email</div>
+              <div class="email">123></div>
+            </div>
+            <hr />
+            <div class="infouser">
+              <div class="title">Gói đã mua</div>
+              <div class="packName">Không có</div>
+            </div>
+            <hr />
+
+            <div class="infouser" style="justify-content: flex-start">
+              <input
+                class="userbtn"
+                type="submit"
+                value="Cập nhật"
+                name="capnhat"
+              />
+            </div>
+          </form>
+          <form class="edit_info" method="post">
+            <h2>Đổi mật khẩu</h2>
+            <div class="infouser">
+              <input type="hidden" name="user_id" value="1" />
+              <div class="title">Mật khẩu cũ</div>
+              <input
+                type="password"
+                name="oldpass"
+                id=""
+                class="input"
+                required
+              />
+            </div>
+            <hr />
+            <div class="infouser">
+              <div class="title">Mật khẩu mới</div>
+              <input
+                type="password"
+                name="newpass"
+                id=""
+                class="input"
+                required
+              />
+            </div>
+            <hr />
+            <div class="infouser">
+              <div class="title">Xác nhận mật khẩu mới</div>
+              <input
+                type="password"
+                name="renewpass"
+                id=""
+                class="input"
+                required
+              />
+            </div>
+            <hr />
+            <div class="infouser" style="justify-content: flex-start">
+              <input
+                class="userbtn"
+                type="submit"
+                value="Đổi mật khẩu"
+                name="updatepass"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container footer">
+        <div class="footer_elements">
+          <div class="footer_elements-logo">
+            <img src="img/Trioflix-logo.png" alt="" />
+          </div>
+          <div class="footer_elements-intro">
+            Xem phim trực tuyến, tận hưởng trọn vẹn những bộ phim yêu thích.
+          </div>
+          <div class="footer_elements-socials">
+            <a href="" class="social-link">
+              <i class="bx bxl-facebook-circle"></i>
+            </a>
+            <a href="" class="social-link">
+              <i class="bx bxl-twitter"></i>
+            </a>
+            <a href="" class="social-link">
+              <i class="bx bxl-tiktok"></i>
+            </a>
+            <a href="" class="social-link">
+              <i class="bx bxl-instagram"></i>
+            </a>
+            <a href="" class="social-link">
+              <i class="bx bxl-youtube"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer_elements">
+          <div class="elements_title">TRIOFLIX</div>
+          <div class="elements_contents">
+            <a href="#">Về chúng tôi</a><a href="#">Các gói</a
+            ><a href="#">Liên hệ & Góp ý</a>***
+          </div>
+        </div>
+        <div class="footer_elements">
+          <div class="elements_title">Tìm kiếm</div>
+          <div class="elements_contents">
+            <a href="#">Phim lẻ</a><a href="#">Phim bộ</a>
+          </div>
+        </div>
+        <div class="footer_elements">
+          <div class="elements_title">Điều khoản dịch vụ</div>
+          <div class="elements_contents">
+            <a href="#">Điều khoản quyền riêng tư</a
+            ><a href="#">Điều khoản sử dụng</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

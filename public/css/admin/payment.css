@@ -1,0 +1,318 @@
+:root {
+    --fontContent: "Roboto", sans-serif;
+    --fontTitle-nameFilm: "Raleway", sans-serif;
+    --colorBackgroundMain: #000;
+    --colorGradient: linear-gradient(to right, #f90909, #f5f322);
+    --colorBackgroundSecondary: #1a1a1a;
+    --colorRed: #f90909;
+    --colorYellow: #f5f322;
+    --colorBlue: #00daff;
+  }
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body{
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(8, 8, 8, 0.459);
+    height: 100vh; /* Đặt chiều cao toàn màn hình */
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: center; /* Căn giữa ngang */
+    align-items: center; /* Căn giữa dọc */
+}
+
+.contents{
+    font-size: 14px;
+    color: #fff;
+    width: 800px;
+    height: 580px;
+    background: linear-gradient(#000,#000) content-box,
+    linear-gradient(180deg, #f90909, #f5f322) padding-box;
+    padding: 2px;
+    position: fixed;
+    /* border-radius: 15px; */
+    overflow-y: scroll;
+    font-family: var(--fontContent);
+
+}
+.contents::-webkit-scrollbar{
+display: none;
+}
+.container{
+width:720px ;
+margin: auto;
+  
+}
+header{  
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+    background-color: var(--colorBackgroundSecondary);
+
+    .header{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .header__rihgt{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #fff;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .info{
+            .name{
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 70px;
+    padding-bottom: 20px;
+}
+.packages{
+    display: flex;
+    gap: 20px;
+    .pack{
+        flex: 1;
+        height: 272px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        background-color: var(--colorBackgroundSecondary);
+        border-top: 3px solid var(--colorRed);
+        border-radius: 5px;
+        font-weight: 500;
+        transition: all .5s ease-out;
+        cursor: pointer;
+
+        .name{
+            font-size: 16px;
+            display:flex ;
+            align-items: center;
+            gap: 5px;
+            .fa-solid{
+                font-size: 14px;
+                color: goldenrod;
+            }
+
+        }
+        .detailPack{
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 30px;
+            font-weight: 400;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+}
+
+.notice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .content_notice{
+        span{
+            color: var(--colorRed);
+            font-weight: 500;
+        }
+
+    }
+
+    #select{
+        background-color: var(--colorBackgroundSecondary);
+        color:  #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 7px ;
+        text-align: center;
+        padding-right: 7px;
+        outline: none;
+    }
+}
+
+.bill{
+    display:flex ;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 15px;
+    width: 410px;
+    background-color:  var(--colorBackgroundSecondary);
+    align-self: center;
+    gap: 20px;
+    .title{
+        color: var(--colorRed);
+    }
+    .title,.total{
+        font-size: 18px;
+
+        align-self: center;
+        font-weight: 600;
+    }
+    .detail-bill{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        font-size: 14px;
+        font-weight: 500;
+        span{
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+}
+
+.paymentMethod{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .title-payment{
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .methods{
+        display: flex;
+        gap: 20px;
+
+        .method{
+            width:  200px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            background-color: var(--colorBackgroundSecondary);
+            padding: 10px 20px ;
+            border-radius: 5px;
+            border: solid 1px white;
+            transition: all 0.5s ;
+            font-weight: 400;
+            font-size: 14px;
+            .icon-method{
+                width: 30px;
+                padding-top: 30px;
+                background-color: aquamarine;
+                border-radius: 5px;
+            }
+
+            &:hover{
+                border: solid 1px var(--colorRed);
+            }
+        }
+    }
+
+    .btn-pay{
+        background-color: var(--colorRed);
+        color: white;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+    }
+}
+
+
+/* -----------------------form */
+/* Form container styles */
+.form-method {
+    background-color: var(--colorBackgroundSecondary);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Input field styles */
+  .form-method .form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .form-method .form-group input:focus {
+    border-color: #007bff;
+  }
+  
+  /* Label styles */
+  .form-method .form-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: white;
+  }
+  
+  /* Form row (for expiry date and CVV) */
+  .form-row {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .form-row .form-group {
+    flex: 1;
+  }
+  
+  /* Checkbox styles */
+  .form-method .form-group input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  .form-method .form-group label a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .form-method .form-group label a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Button styles */
+  .btn-pay {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-pay:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Overall form alignment */
+  .form-method .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-method {
+    margin-top: 20px;
+  }

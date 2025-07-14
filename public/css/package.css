@@ -1,0 +1,264 @@
+#contents {
+  width: 100%;
+  margin: 100px auto 0;
+  padding-bottom: 70px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.title {
+  font-size: 30px;
+  font-weight: 500;
+}
+.line-gradient {
+  height: 2px;
+  width: 600px;
+  background: var(--colorGradient);
+}
+.mainContents_packages {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.packages_pack {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  justify-content: space-between;
+}
+.pack {
+  flex: 1;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 35px 20px;
+  justify-content: space-between;
+  background-color: var(--colorBackgroundSecondary);
+  border-radius: 5px;
+  border-top: 3px solid var(--colorRed);
+  transition: all 0.3s ease-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+  .namePack {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 17px;
+    font-weight: 500;
+    .name {
+      color: rgba(255, 255, 255, 0.5);
+      .fa-solid {
+        color: gold;
+      }
+    }
+  }
+  .detailPack {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 30px;
+    text-align: center;
+  }
+  .buyBtn {
+    border-radius: 25px;
+    padding: 15px 25px;
+  }
+}
+.notice {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  .content_notice {
+    span {
+      color: var(--colorRed);
+      font-weight: 500;
+    }
+  }
+
+  #select {
+    background-color: var(--colorBackgroundSecondary);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 7px;
+    text-align: center;
+    padding-right: 7px;
+    outline: none;
+  }
+}
+.bill {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 15px;
+  width: 410px;
+  background-color: var(--colorBackgroundSecondary);
+  align-self: center;
+  gap: 20px;
+  .title {
+    color: var(--colorRed);
+  }
+  .title,
+  .total {
+    font-size: 18px;
+
+    align-self: center;
+    font-weight: 600;
+  }
+  .detail-bill {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 14px;
+    font-weight: 500;
+    span {
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+.paymentMethod {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+  .title-payment {
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .methods {
+    display: flex;
+    gap: 20px;
+    .active {
+      border: solid 1px var(--colorRed);
+    }
+    .method {
+      width: 200px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      background-color: var(--colorBackgroundSecondary);
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: solid 1px white;
+      transition: all 0.5s;
+      font-weight: 400;
+      font-size: 14px;
+      .icon-method {
+        width: 30px;
+        height: 30px;
+        /* background-color: aquamarine; */
+        border-radius: 5px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &:hover {
+        border: solid 1px var(--colorRed);
+      }
+    }
+  }
+
+  .btn-pay {
+    background-color: var(--colorRed);
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+  }
+  .btn-pay[disabled] {
+    cursor: not-allowed;
+    background-color: #ccc;
+  }
+}
+.form-method {
+  background-color: var(--colorBackgroundSecondary);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input field styles */
+.form-method .form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-method .form-group input:focus {
+  border-color: #007bff;
+}
+
+/* Label styles */
+.form-method .form-group label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: white;
+}
+
+/* Form row (for expiry date and CVV) */
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* Checkbox styles */
+.form-method .form-group input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.form-method .form-group label a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form-method .form-group label a:hover {
+  text-decoration: underline;
+}
+
+/* Button styles */
+.btn-pay {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-pay:hover {
+  background-color: #0056b3;
+}
+
+/* Overall form alignment */
+.form-method .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-method {
+  margin-top: 20px;
+}

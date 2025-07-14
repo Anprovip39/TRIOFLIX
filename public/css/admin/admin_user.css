@@ -1,0 +1,98 @@
+
+/* Main Content */
+
+
+.user-details {
+    margin: 20px 0;
+    background-color: var(--colorBackgroundSecondary);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.info p {
+    margin-bottom: 10px;
+}
+
+.delete-btn {
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+.delete-btn:hover {
+    background-color: lightgray;
+}
+
+.user-list {
+    margin: 20px 0;
+    background-color: var(--colorBackgroundSecondary);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, 
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+table th {
+    background-color: var(--colorBackgroundSecondary);
+    text-align: left; 
+}
+
+table td {
+    text-align: left; 
+    vertical-align: middle;
+    
+}
+
+td, th{
+    color: white; 
+
+}
+
+table td:last-child {
+    width: 20%;
+    text-align: center;
+    justify-content: center; 
+    align-items: center; 
+}
+
+table td button {
+    padding: 5px 10px;
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+table td button:hover {
+    background-color: #ff1c1c;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <style>
+    .swiper-container {
+      width: 750px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .swiper-slide {
+      width: 300px;
+    }
+  </style>
+  <body>
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img
+            src="http://marveltheme.com/tf/html/appai/appai/img/app-screenshots/10.jpg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="http://marveltheme.com/tf/html/appai/appai/img/app-screenshots/11.jpg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="http://marveltheme.com/tf/html/appai/appai/img/app-screenshots/12.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var mySwiper = new Swiper(".swiper-container", {
+        loop: true,
+        speed: 1000,
+        autoplay: {
+          delay: 3000,
+        },
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slideToClickedSlide: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 80,
+          depth: 200,
+          modifier: 1,
+          slideShadows: false,
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>

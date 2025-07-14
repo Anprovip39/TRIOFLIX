@@ -1,0 +1,339 @@
+:root {
+  --fontContent: "Roboto", sans-serif;
+  --fontTitle-nameFilm: "Raleway", sans-serif;
+  --colorBackgroundMain: #000;
+  --colorGradient: linear-gradient(to right, #f90909, #f5f322);
+  --colorBackgroundSecondary: #1a1a1a;
+  --colorRed: #f90909;
+  --colorYellow: #f5f322;
+  --colorBlue: #00daff;
+}
+#contents {
+  padding-bottom: 50px;
+  margin-top: 100px;
+  font-weight: 500;
+}
+.players {
+  width: 100%;
+  background-color: var(--colorBackgroundSecondary);
+  display: flex;
+}
+.players_video {
+  flex: 3;
+}
+.video {
+  width: 100%;
+  height: 500px;
+}
+.genre a:hover {
+  border: 1px solid var(--colorRed);
+  color: var(--colorRed);
+}
+
+.actions {
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.action {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  .bx {
+    font-size: 20px;
+  }
+  &:hover {
+    color: var(--colorRed);
+  }
+}
+.addAndShare,
+.tvAndDownload {
+  display: flex;
+  gap: 20px;
+  font-weight: 500;
+}
+
+.players_chooseEps {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 20px;
+  section {
+    color: var(--colorRed);
+    font-weight: 500;
+    background: var(--colorBackgroundMain);
+    width: 55%;
+    padding: 10px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  section::before {
+    position: absolute;
+    content: "";
+    border: 20px solid;
+    border-color: var(--colorBackgroundSecondary)
+      var(--colorBackgroundSecondary) transparent transparent;
+    top: 0;
+    right: 0;
+  }
+  .listEps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    .ep {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 0;
+      background-color: #f90909;
+    }
+  }
+}
+.info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 400;
+  .line {
+    background-color: #fff;
+    width: 2px;
+    height: 20px;
+  }
+  .detail span {
+    background: var(--colorGradient);
+    padding: 0px 5px;
+    border-radius: 5px;
+    font-style: italic;
+  }
+}
+.detail {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  .bxs-star {
+    color: var(--colorRed);
+  }
+}
+.infoFilmAndCmts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 3;
+}
+.infoFilm {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  h2 {
+    font-size: 24px;
+  }
+}
+.rating {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  .quntityRating {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  a {
+    color: var(--colorRed);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+}
+.genre {
+  display: flex;
+  a {
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+  }
+}
+.content_page {
+  margin-top: 20px;
+  display: flex;
+}
+.description {
+  display: flex;
+  font-weight: 400;
+  span {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  p {
+    width: 100%;
+    display: -webkit-box;
+    font-size: 16px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    text-align: justify;
+  }
+}
+.cmts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  h3 {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  form {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    #cmt {
+      flex: 1;
+      border-radius: 8px;
+      padding: 15px 20px;
+      border: none;
+      outline: none;
+    }
+  }
+}
+.cmts_box {
+  background-color: var(--colorBackgroundSecondary);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.userCmt {
+  display: flex;
+  gap: 20px;
+}
+.avt {
+  background-color: var(--colorBackgroundMain);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.infoUser {
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  .cmtTime {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+    font-size: 12px;
+  }
+  .cmtContent {
+    font-weight: 400;
+  }
+}
+
+.suggestion {
+  flex: 1;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease;
+  gap: 20px;
+  h2 {
+    font-size: 24px;
+  }
+  .listFilm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    .film {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      font-size: 18px;
+      font-weight: 600;
+      &:hover {
+        .nameFilm {
+          color: var(--colorRed);
+        }
+        img {
+          transform: scale(1.1);
+          filter: blur(3px);
+        }
+        .imgHover {
+          display: flex;
+        }
+      }
+      .imgHover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        display: none;
+        .bx-play-circle {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          font-size: 80px;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .imgFilm {
+        width: 200px;
+        height: 129px;
+        border-radius: 17px;
+        overflow: hidden;
+        position: relative;
+        img {
+          width: 100%;
+          transition: all 0.5s;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  margin: 0 5px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.pagination a.active {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+}
+
+.pagination a:hover {
+  background-color: #f1f1f1;
+}
